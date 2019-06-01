@@ -11,7 +11,7 @@ public class Algebra {
         return a+b;
     }
 
-    public double divideNumbers(int a, int b){
+    public int divideNumbers(int a, int b){
         int c=0;
         try {
         c = a/b;
