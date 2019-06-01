@@ -9,8 +9,12 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <junit.jupiter.version>5.0.0-M4</junit.jupiter.version>
+        <sonar.projectKey>itsgauravsaxena_hackathon</sonar.projectKey>
+        <sonar.organization>itsgauravsaxena-github</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.login>a857e17a731e23b370ed6109f319f99b5e9005dd</sonar.login>
+        <sonar.branch>master</sonar.branch>
     </properties>
-
 
     <dependencies>
         <dependency>
@@ -19,5 +23,17 @@
             <version>${junit.jupiter.version}</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.4.0.905</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>
