@@ -1,0 +1,7 @@
+organization=itsgauravsaxena-github
+projectKey=itsgauravsaxena_hackathon
+serverUrl=https://sonarcloud.io
+serverVersion=7.8.0.25269
+dashboardUrl=https://sonarcloud.io/dashboard?id=itsgauravsaxena_hackathon
+ceTaskId=AWsMjUArEKlamx8hMKSK
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWsMjUArEKlamx8hMKSK
