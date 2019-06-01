@@ -5,7 +5,7 @@ import java.util.logging.Logger;
 
 public class Algebra {
 
-    final static Logger logger = Logger.getLogger(Algebra.class.getSimpleName());
+    private final static Logger logger = Logger.getLogger(Algebra.class.getSimpleName());
 
     public int addNumbers(int a, int b){
         return a+b;
