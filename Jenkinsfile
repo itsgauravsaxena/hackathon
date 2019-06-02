@@ -1,9 +1,5 @@
 pipeline {
   agent any
-    tools {
-    maven 'maven3.6.1'
-    jdk 'java9'
-    }
   stages {
     stage('Initialize') {
       steps {
@@ -11,9 +7,17 @@ pipeline {
       }
     }
     stage('Build') {
+      environment {
+        maven = 'maven3.6.1'
+        jdk = 'java9'
+      }
       steps {
         sh 'mvn clean install'
       }
     }
+  }
+  tools {
+    maven 'maven3.6.1'
+    jdk 'java9'
   }
 }
