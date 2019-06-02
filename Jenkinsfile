@@ -16,8 +16,4 @@ pipeline {
       }
     }
   }
-  tools {
-    maven 'maven3.6.1'
-    jdk 'java9'
-  }
 }
