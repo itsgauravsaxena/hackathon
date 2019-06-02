@@ -1,9 +1,5 @@
 pipeline {
   agent any
-  tools { 
-        maven 'maven3.6.1' 
-        jdk 'java9' 
-    }
   stages {
     stage('Initialize') {
       agent any
@@ -12,14 +8,27 @@ pipeline {
       }
     }
     stage('Build') {
-      agent any
-      environment {
-        maven = 'maven3.6.1'
-        jdk = 'java9'
-      }
-      steps {
-        sh 'mvn clean install'
+      parallel {
+        stage('Build') {
+          agent any
+          environment {
+            maven = 'maven3.6.1'
+            jdk = 'java9'
+          }
+          steps {
+            sh 'mvn clean install'
+          }
+        }
+        stage('sonarqube') {
+          steps {
+            sh 'mvn sonar:sonar'
+          }
+        }
       }
     }
+  }
+  tools {
+    maven 'maven3.6.1'
+    jdk 'java9'
   }
 }
