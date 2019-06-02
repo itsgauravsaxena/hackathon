@@ -11,6 +11,7 @@ public class Algebra {
         return a+b;
     }
 
+    //TODO refactor
     public int divideNumbers(int a, int b){
         int c=0;
         try {
