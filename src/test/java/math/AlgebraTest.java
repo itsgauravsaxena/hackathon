@@ -62,4 +62,14 @@ public class AlgebraTest {
         // Run the test
         algebraUnderTest.divideNumbers(a, b);
     }
+
+    @Test(expected = NegativeNotAllowedException.class)
+    public void testDivideNumbers_ThrowsNegativeNotAllowedException1() throws Exception {
+        // Setup
+        final int a = 0;
+        final int b = -1;
+
+        // Run the test
+        algebraUnderTest.divideNumbers(a, b);
+    }
 }
