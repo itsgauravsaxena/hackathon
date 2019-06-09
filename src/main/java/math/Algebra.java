@@ -7,11 +7,10 @@ public class Algebra {
         return a+b;
     }
 
-    //TODO refactor
-    public int divideNumbers(int a, int b) throws ArithmeticException,NegativeNotAllowedException{
+    public int divideNumbers(int a, int b) throws DivisorZeroNotAllowedException,NegativeNotAllowedException{
 
         if (b==0){
-            throw new ArithmeticException();
+            throw new DivisorZeroNotAllowedException("Divisor cannot be zero");
         }
 
         if(a<0 || b<0){

@@ -42,21 +42,21 @@ public class AlgebraTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test(expected = ArithmeticException.class)
-    public void testDivideNumbers_ThrowsArithmeticException() throws Exception {
-        // Setup
-        final int a = 10;
-        final int b = 0;
-
-        // Run the test
-        algebraUnderTest.divideNumbers(a, b);
-    }
-
     @Test(expected = NegativeNotAllowedException.class)
     public void testDivideNumbers_ThrowsNegativeNotAllowedException() throws Exception {
         // Setup
         final int a = -4;
         final int b = 2;
+
+        // Run the test
+        algebraUnderTest.divideNumbers(a, b);
+    }
+
+    @Test(expected = DivisorZeroNotAllowedException.class)
+    public void testDivideNumbers_ThrowsDivisorZeroNotAllowedException() throws Exception {
+        // Setup
+        final int a = 10;
+        final int b = 0;
 
         // Run the test
         algebraUnderTest.divideNumbers(a, b);
