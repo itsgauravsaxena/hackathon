@@ -14,7 +14,7 @@
         <sonar.organization>itsgauravsaxena-github</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.login>a857e17a731e23b370ed6109f319f99b5e9005dd</sonar.login>
-        <sonar.branch>master</sonar.branch>
+        <sonar.branch.name>master</sonar.branch.name>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
         <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>

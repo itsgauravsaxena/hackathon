@@ -19,7 +19,7 @@ pipeline {
     }
     stage('sonarqube') {
       steps {
-        sh 'mvn clean install sonar:sonar'
+        sh 'mvn clean install jacoco:prepare-agent package jacoco:report sonar:sonar'
       }
     }
   }
