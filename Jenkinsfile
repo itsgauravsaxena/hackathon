@@ -8,22 +8,18 @@ pipeline {
       }
     }
     stage('Build') {
-      parallel {
-        stage('Build') {
-          agent any
-          environment {
-            maven = 'maven3.6.1'
-            jdk = 'java9'
-          }
-          steps {
-            sh 'mvn clean install'
-          }
-        }
-        stage('sonarqube') {
-          steps {
-            sh 'mvn sonar:sonar'
-          }
-        }
+      agent any
+      environment {
+        maven = 'maven3.6.1'
+        jdk = 'java9'
+      }
+      steps {
+        sh 'mvn clean install'
+      }
+    }
+    stage('sonarqube') {
+      steps {
+        sh 'mvn sonar:sonar'
       }
     }
   }
