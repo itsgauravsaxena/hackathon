@@ -14,6 +14,8 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.login>a857e17a731e23b370ed6109f319f99b5e9005dd</sonar.login>
         <sonar.branch>master</sonar.branch>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
 
     <dependencies>
@@ -34,6 +36,16 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
