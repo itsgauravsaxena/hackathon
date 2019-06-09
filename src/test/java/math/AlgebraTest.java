@@ -42,7 +42,7 @@ public class AlgebraTest {
         assertEquals(expectedResult, result);
     }
 
-    /*
+
     @Test(expected = NegativeNotAllowedException.class)
     public void testDivideNumbers_ThrowsNegativeNotAllowedException() throws Exception {
         // Setup
@@ -61,5 +61,5 @@ public class AlgebraTest {
 
         // Run the test
         algebraUnderTest.divideNumbers(a, b);
-    }*/
+    }
 }
